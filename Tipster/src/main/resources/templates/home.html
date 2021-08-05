@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Tipster</title>
+  <link rel="icon" type="image/png" th:href="@{/icon.png}">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+<style>
+body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
+</style>
+</head>
+<body class="w3-light-grey">
+<div class="w3-content" style="max-width:1400px">
+  <header class="w3-container w3-center w3-padding-32">
+    <h1><b>Tipster</b></h1>
+    <p>Welcome to the world of <span class="w3-tag">Opputunities</span></p>
+  </header>
+  <div class="w3-row">
+    <div class="w3-col l8 s12">
+      <div class="w3-card-4 w3-margin w3-white">
+        <img th:src="@{/jobs.jpeg}" alt="Carrer" style="width:100%" />
+        <div class="w3-container">
+          <h3><b>Opportunities are one step away..</b></h3>
+          <h5>Sign up here.<span class="w3-opacity">July 29, 2021</span></h5>
+        </div>
+        <div class="w3-container">
+          <p>Mauris neque quam, fermentum ut nisl vitae, convallis maximus nisl. Sed mattis nunc id lorem euismod placerat. Vivamus porttitor magna enim, ac accumsan tortor cursus at. Phasellus sed ultricies mi non congue ullam corper. Praesent tincidunt sed
+            tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
+        </div>
+      </div>
+      <hr>
+    </div>
+    <div class="w3-col l4">
+      <div class="w3-card w3-margin w3-margin-top">
+        <img th:src="@{/apply.jpg}" style="width:100%" />
+        <div class="w3-container w3-white">
+          <h3><b>Tipster Services</b></h3>
+          <p>Once you subscribe to services of Tipster you will be able to get Job Opportunities notifications to your mail. Why late Sign Up now itself</p>
+          <form action="#" th:action="@{/tipster/signupForm}">
+            <button type="submit" class="btn btn-primary" style="float: right">Sign Up</button>
+          </form>
+          <br>
+          <pre style="text-align:center">Already have an account?? Sign in</pre>
+          <form action="#" th:action="@{/tipster/signinForm}">
+            <button type="submit" class="btn btn-primary" style="float:right">Sign In</button>
+          </form>
+        </div>
+      </div>
+    </div>
+   </div>
+  </div>
+</body>
+</html>

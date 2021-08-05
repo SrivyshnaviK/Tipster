@@ -1,0 +1,27 @@
+CREATE DATABASE  IF NOT EXISTS `tipster` /*!40100 DEFAULT CHARACTER SET latin1 */;
+USE `expense_tracker`;
+
+DROP TABLE IF EXISTS `user`;
+
+CREATE TABLE `user` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `first_name` varchar(45) DEFAULT NULL,
+  `last_name` varchar(45) DEFAULT NULL,
+  `email` varchar(45) DEFAULT NULL,
+  `password` varchar(45) default null,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=latin1;
+
+truncate user;
+
+DROP TABLE IF EXISTS `usercredentials`;
+
+CREATE TABLE `usercredentials` (
+`id` int(11) NOT NULL AUTO_INCREMENT,
+  `email` varchar(45) DEFAULT NULL,
+  `password` varchar(45) default null,
+  `user_id` int(11) DEFAULT NULL,
+  primary key (id),
+  KEY `FK_DETAIL_idx` (`user_id`),
+  CONSTRAINT `FK_DETAIL` FOREIGN KEY (`user_id`) REFERENCES `user` (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=latin1;

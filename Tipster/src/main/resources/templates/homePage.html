@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <title>Tipster</title>
+</head>
+<body div="container" >
+<div class="page-header">
+    <h1>Tipster</h1>
+</div><br>
+       <p><h4>Sign up to get our services!!!</h4></p>
+    <hr width="2px">
+    <br><br>
+    <form action="#" th:action="@{/tipster/signupForm}">
+        <button type="submit" class="btn btn-primary" style="float: right">Sign Up</button>
+    </form>
+    <br>
+    <pre style="text-align:right">Already have an account?? Sign in!</pre>
+    <form action="#" th:action="@{/tipster/signinForm}">
+        <button type="submit" class="btn btn-primary" style="float:right">Sign In</button>
+    </form>
+    <div sec:authorize="hasRole('Admin')">
+        <p>
+            <a th:href="@{tipster/admin}"></a>
+        </p>
+    </div>
+</body>
+</html>
