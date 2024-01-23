@@ -1,1 +1,2 @@
-[Link to Content from Other Repo](https://raw.githubusercontent.com/SrivyshnaviK/ShopLite/master/pom.xml)
+<!-- include-start: https://raw.githubusercontent.com/username/other-repo/main/content.md -->
+<!-- include-end -->
